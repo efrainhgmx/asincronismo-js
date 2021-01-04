@@ -1,3 +1,4 @@
+//EJERCICIO 1
 function suma(num1, num2) {
     return num1 + num2;
 }
@@ -8,6 +9,8 @@ function calc(num1, num2, callback) {
 
 console.log(calc(2, 2, suma));
 
+
+//EJERCICIO 2
 function date(callback) {
     console.log(new Date);
     setTimeout(function () {
@@ -22,6 +25,8 @@ function printDate(dateNow) {
 
 date(printDate);
 
+
+//EJERCICIO 3
 
 function multiply(x, y) {
     return x * y;
