@@ -57,3 +57,20 @@ function printSquare(x) {
 
 printSquare(5);
 console.log(multiply(5, 2));
+
+
+//Ejercicio 4
+
+function first(callback) {
+    setTimeout(function () {
+        console.log("Funcion 1");
+        callback();
+    }, 1000);
+    
+}
+
+function second() {
+    console.log("Funcion 2");
+}
+
+first(second);
