@@ -38,3 +38,23 @@ const getData = () => {
 getData()
     .then(response => console.log(response))
     .catch(err => console.error(err));
+
+
+//Consumo de API con AJAX 
+//Modulo para hacer peticiones con Noje Js
+let XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+
+const dataAPI = (url_api) => {
+    return new Promise ((resolve, reject) => {
+        const xhttp = new XMLHttpRequest();
+        xhttp.open('GET', url_api, true);
+        xhttp.onreadystatechange = (() => {
+            if (xhttp.readyState === 4) {
+                (xhttp.status === 200)
+                    ? resolve(JSON.parse(xhttp.responseText))
+                    : reject(new Error ('Error in: ' + url_api))
+            }
+        });
+        xhttp.send();
+    });
+}
